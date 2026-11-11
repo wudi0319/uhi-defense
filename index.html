@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="保卫UHI">
+<meta name="theme-color" content="#7cc96b">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="icon" href="icon-192.png">
+<title>保卫UHI</title>
+<link rel="stylesheet" href="style.css?v=5">
+</head><body>
+<main id="stage"><canvas id="map"></canvas>
+ <div id="hud">
+  <div class="pill" id="hGold">💰 0</div>
+  <div class="pill" id="hNight">☀️ 第1天</div>
+  <div class="bars"><div class="bar"><span>🏠</span><i><b id="hHome"></b></i></div><div class="bar"><span id="hMe">🏗️</span><i><b id="hHp"></b></i></div></div>
+ </div>
+ <div id="hint"></div>
+ <div id="toast"></div>
+ <div id="joy"><div id="knob"></div></div>
+ <div id="acts">
+  <button id="armyBtn" class="act hidden">👷 跟我来</button>
+  <button id="buildBtn" class="act hidden"></button>
+  <button id="skillBtn" class="act round hidden"><span id="skillName">技能</span><em id="skillCd"></em></button>
+  <button id="nightBtn" class="act night hidden">🌙 开始入夜</button>
+ </div>
+</main>
+<div id="start" class="ov"><div class="card">
+ <h1>🏠 保卫UHI</h1>
+ <p class="sub">白天建造，晚上开着徐工 240 桩机锤翻来犯的机械，保护 UHI！</p>
+ <b>选择桩机</b>
+ <div class="row pick" id="pickHero">
+  <button data-hero="yellow" class="on"><canvas width="96" height="96"></canvas>楚剑<small>徐工240 · 徐工黄</small></button>
+  <button data-hero="blue"><canvas width="96" height="96"></canvas>John<small>徐工240 · 天空蓝</small></button>
+ </div>
+ <b>桩锤类型（技能都是「动力头加压」）</b>
+ <div class="row pick" id="pickWeapon"></div>
+ <b>天赋（最多选 2 个）</b>
+ <div class="talents" id="pickTalent"></div>
+ <button id="goBtn" class="big">出发！</button>
+ <label class="test"><input type="checkbox" id="unlockAll"> 试玩：全部解锁</label>
+ <p class="rec" id="rec"></p>
+</div></div>
+<div id="end" class="ov hidden"><div class="card"><div id="endIcon" class="bigic"></div><h2 id="endTitle"></h2><p id="endText"></p><p id="endUnlock" class="unl"></p><button id="againBtn" class="big">再来一次</button></div></div>
+<script src="js/art.js?v=5"></script>
+<script src="js/data.js?v=5"></script>
+<script src="js/game.js?v=5"></script>
+<script src="js/ui.js?v=5"></script>
+</body></html>
